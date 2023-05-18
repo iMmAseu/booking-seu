@@ -1,5 +1,6 @@
 import { Switch, Route } from "react-router"
 import { HotelDetails } from "../Components/HotelDetails/Components/HotelDetails"
+import {Purchase} from "../Components/Purchase/Purchase"
 import Login from "../Components/Login/Login"
 import Signup from "../Components/Login/Signup"
 import { SearchPage } from "../Components/SearchPage/SearchPage"
@@ -27,6 +28,9 @@ export const Routes = () => {
             </Route>
             <Route path="/search/:id">
                 <HotelDetails />
+            </Route>
+            <Route path="/search/:id/purchase">
+                <Purchase />
             </Route>
         </Switch>
 

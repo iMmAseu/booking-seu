@@ -1,6 +1,7 @@
+import { Link } from '@material-ui/core'
 import { useState, useEffect } from 'react'
-// import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+
 
 const Div = styled.div`
 width:100%;
@@ -106,7 +107,7 @@ img{
 
 
 `
-export const Availability = () => {
+export const Availability = ({ url, id, view, price, name, city, distance, bedSize, roomSize, cancelationPolicy, cancellation, reviews, rating, breakFast, availability, availableRooms, discountedPrice }) => {
     const [reserve, setReserve] = useState(false)
     const [user, setUser] = useState(false);
 
@@ -173,14 +174,13 @@ export const Availability = () => {
 
 
                     </DataDiv>
-
+                    <Link to={`/search/${id}/purchase`}>
                     <Button onClick={handleClick}>
-                        {/* <Link to="/" style={{ textDecoration: "none", color: "white" }}> */}
                         {
                             !reserve ? "预订" : "已预定"
                         }
-                        {/* // </Link> */}
                     </Button>
+                    </Link>
                 </FelxDiv>
 
 
