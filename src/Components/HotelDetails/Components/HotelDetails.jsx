@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 import { TopSection } from './TopSection/TopSection'
 import { TitleInfo } from './TittleInfo/TittleInfo'
