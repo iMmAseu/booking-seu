@@ -6,6 +6,8 @@ import ShareIcon from '@material-ui/icons/Share';
 import RoomIcon from '@material-ui/icons/Room';
 import { redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+//import { Link } from '@material-ui/core';
+
 const Cont = styled.div`
 display:grid;
 grid-template-columns: 70% 30%;
@@ -262,13 +264,11 @@ export const TitleInfo = (props) => {
                         <FavoriteBorderIcon style={{ color: "#3c79cf" }} />
                         <ShareIcon style={{ color: "#3c79cf", marginLeft: "10px" }} />
                         <Reserve>
-
                             <p onClick={handleClick}>
                                 {/* <Link to="/" style={{ color: "white", textDecoration: "none" }}> */}
                                 预订
                                 {/* </Link> */}
                             </p>
-
                         </Reserve>
 
 

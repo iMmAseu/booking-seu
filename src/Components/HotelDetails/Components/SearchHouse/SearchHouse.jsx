@@ -4,6 +4,7 @@ import 'dayjs/locale/zh-cn';
 import locale from 'antd/es/date-picker/locale/zh_CN';
 import {InfoCircleTwoTone,RedoOutlined} from '@ant-design/icons';
 import styled from 'styled-components';
+import { Link} from "react-router-dom";
 
 const Reserve = styled.div`
 box-sizing: border-box;
@@ -93,7 +94,7 @@ const onChange = (value) => {
     console.log('changed', value);
   };
 
-export const SearchHouse= () => {
+export const SearchHouse= ({ id}) => {
     return (
     <div>
         <h2>空房情况</h2>
@@ -106,7 +107,14 @@ export const SearchHouse= () => {
                 <Space>             
                     <InputNumber size="middle" min={0} max={30} defaultValue={3} onChange={onChange} />位成人
                     <InputNumber size="middle" min={0} max={30} defaultValue={3} onChange={onChange} />名儿童
-                    <InputNumber size="middle" min={0} max={30} defaultValue={3} onChange={onChange} />间客房  
+                    <InputNumber size="middle" min={0} max={30} defaultValue={3} onChange={onChange} />间客房
+                    <Link to={`/search/${id}/purchase`}>
+                        <Reserve>
+                            <p>
+                                付款
+                            </p>
+                        </Reserve> 
+                    </Link>     
                 </Space>  
             </Row>
             <Table columns={columns} expandable={{expandedRowRender: (record) => (<p style={{margin: 0,}}>{record.description}</p>), rowExpandable: (record) => record.name !== 'Not Expandable',}} dataSource={data} />

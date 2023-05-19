@@ -111,14 +111,8 @@ export const FilterFeature = ({ filterPrice, filterStar, filterPolicy }) => {
 
         <div className={styles.budget}>
             <h3>您的预算(每晚)</h3>
-
-
             <Switch color="primary" />
             <p className={styles.own}>设定你的预算</p>
-            
-
-
-
             <div>
                 <div>
                     <input type="radio" value="1500" onChange={handleFilterprice} name="price" />
@@ -206,7 +200,6 @@ export const FilterFeature = ({ filterPrice, filterStar, filterPolicy }) => {
                     <input type="radio" value="breakFast" name="policy" onChange={handleFilterPolicy} />
                     <p> 免费早餐</p>
                 </div>
-
                 <p>{breakfast}</p>
             </div>
         </div>

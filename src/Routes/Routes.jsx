@@ -26,14 +26,12 @@ export const Routes = () => {
             <Route exact path="/search">
                 <SearchPage />
             </Route>
-            <Route path="/search/:id">
+            <Route exact path="/search/:id">
                 <HotelDetails />
             </Route>
             <Route path="/search/:id/purchase">
                 <Purchase />
             </Route>
         </Switch>
-
     </>
-
 }

@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import { CarouselDiv } from "../feature/CarosueDiv";
 
@@ -204,23 +203,7 @@ export const LocationCarosueDiv = () => {
   
 </A>
 
-</Box>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-               
+</Box>           
         </CarouselDiv>
     )
 

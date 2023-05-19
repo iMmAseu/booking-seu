@@ -1,8 +1,7 @@
-import { Link } from '@material-ui/core'
+import { Link as _Link } from '@material-ui/core'
 import { useState, useEffect } from 'react'
 import styled from 'styled-components'
-
-
+import { Link } from "react-router-dom";
 const Div = styled.div`
 width:100%;
 margin-bottom:20px;
@@ -174,20 +173,12 @@ export const Availability = ({ url, id, view, price, name, city, distance, bedSi
 
 
                     </DataDiv>
-                    <Link to={`/search/${id}/purchase`}>
                     <Button onClick={handleClick}>
                         {
                             !reserve ? "预订" : "已预定"
                         }
-                    </Button>
-                    </Link>
+                    </Button>                  
                 </FelxDiv>
-
-
-
-
-
-
             </Cont>
 
         </Div>

@@ -197,7 +197,6 @@ export const SearchDeals = () => {
                                     onChange={onEndChange}
                                     value={endvalue}
                                     className={styles.cal1}
-
                                 />
                             </div>
                         }
@@ -233,10 +232,8 @@ export const SearchDeals = () => {
                                 </div>
                                 <div >
                                     <div className={styles.button}>
-
                                         <button
                                             onClick={() => handleAdults(-1)}
-
                                         >-</button>
                                     </div>
                                     <div>
@@ -245,7 +242,6 @@ export const SearchDeals = () => {
                                     <div className={styles.button}>
                                         <button
                                             onClick={() => handleAdults(1)}
-
                                         >+</button>
                                     </div>
                                 </div>
@@ -253,11 +249,9 @@ export const SearchDeals = () => {
                             <div className={styles.adult}>
                                 <div>
                                     <h4>儿童</h4>
-
                                 </div>
                                 <div >
                                     <div className={styles.button}>
-
                                         <button
                                             onClick={() => handleChildren(-1)}
                                         >-</button>
@@ -266,10 +260,8 @@ export const SearchDeals = () => {
                                         <h4>{children}</h4>
                                     </div>
                                     <div className={styles.button}>
-
                                         <button
                                             onClick={() => handleChildren(1)}
-
                                         >+</button>
                                     </div>
                                 </div>
@@ -277,11 +269,9 @@ export const SearchDeals = () => {
                             <div className={styles.adult}>
                                 <div>
                                     <h4>客房</h4>
-
                                 </div>
                                 <div >
                                     <div className={styles.button}>
-
                                         <button
                                             onClick={() => handleRooms(-1)}
                                         >-</button>
@@ -298,10 +288,8 @@ export const SearchDeals = () => {
                             </div>
                         </div>}
                 </div>
-
                 <div className={styles.button}>
                     <Link to="/search">
-
                         <button>搜索</button>
                     </Link>
                 </div>

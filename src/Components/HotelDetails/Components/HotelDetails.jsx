@@ -32,8 +32,7 @@ margin:0 ;
 `
 export const HotelDetails = () => {
     const param = useParams()
-    const [, setShowData] = useState("")
-
+    const [showData, setShowData] = useState(HotelData)
     const sendData = HotelData.filter((el) => {
         return el.id === Number(param.id)
     })
@@ -65,7 +64,7 @@ export const HotelDetails = () => {
                     />
                     <AllIcons />
                     <Availability />
-                    <SearchHouse/>
+                    <SearchHouse id={sendData[0].id}/>
                 </Div>
             </Wrapper>
             <FooterBlue />

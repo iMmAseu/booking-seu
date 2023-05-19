@@ -7,17 +7,9 @@ import { HomeGuestsDiv } from "../Components/HomeGuests/HomeGuestsDiv"
 import { NextTrip } from "../Components/NextTripDiv/NextTrip"
 import { MiddleSection } from "../Components/middleSection/MiddleSection"
 
-
-
-
 export const Home = () => {
-
-
-
-
     return <>
         <div >
-
             <Navbar />
             <SearchDeals />
             <MiddleSection />
@@ -26,7 +18,6 @@ export const Home = () => {
             <Degination />
             <Discover />*/}
             <FooterBlue />
-
         </div>
     </>
 }
