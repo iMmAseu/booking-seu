@@ -3,15 +3,16 @@ import FooterBlue from '../Footer/FooterBlue'
 import { useParams } from 'react-router'
 import { HotelData } from '../../Utils/HotelData'
 import { useState } from 'react'
-import { Col, Breadcrumb, Row } from 'antd';
+import { Col, Breadcrumb, Row } from 'antd'
 import {OrderInfo} from '../Purchase/OrderInfo/OrderInfo'
 import {HotelPrice} from '../Purchase/HotelPrice/HotelPrice'
-import { HomeOutlined, UserOutlined,BarChartOutlined } from '@ant-design/icons';
+import {HouseInfo} from '../Purchase/HouseInfo/HouseInfo'
+import { HomeOutlined, UserOutlined,BarChartOutlined } from '@ant-design/icons'
+import { HotelCard } from './HotelCard/HotelCard'
 
 export const Purchase = () => {
     const param = useParams()
-    const [, setShowData] = useState("")
-
+    const [showData, setShowData] = useState(HotelData)
     const sendData = HotelData.filter((el) => {
         return el.id === Number(param.id)
     })
@@ -23,10 +24,10 @@ export const Purchase = () => {
         setShowData(filteredData)
     }
     return (
-        <>
+        <div className="container">
             <Navbar />
             <Row gutter={16}>
-                <Col className="gutter-row" span={2}>
+                <Col className="gutter-row" span={4}>
                 </Col>
             <Breadcrumb
             items={[
@@ -35,7 +36,7 @@ export const Purchase = () => {
                     title: (
                         <>
                             <HomeOutlined />
-                            <span>主页</span>
+                            <span style={{ fontSize: '20px' }}>主页</span>
                         </>
                     ),
                 },
@@ -44,7 +45,7 @@ export const Purchase = () => {
                     title: (
                         <>
                             <UserOutlined />
-                            <span>酒店选取</span>
+                            <span style={{ fontSize: '20px' }}>酒店选取</span>
                         </>
                     ),
                 },
@@ -53,17 +54,21 @@ export const Purchase = () => {
                     title: (
                         <>
                             <BarChartOutlined/>
-                            <span>酒店详情</span>
+                            <span style={{ fontSize: '20px' }}>酒店详情</span>
                         </>
                     ),
                 },
                 {
-                    title: '付款界面',
+                    title: (
+                        <>
+                            <span style={{ fontSize: '20px' }}>付款界面</span>
+                        </>
+                    )
                 },
                 ]}
             />
             </Row>
-            <Row gutter={[1, 24]}>
+            <Row gutter={20}>
                 <Col className="gutter-row" span={4}>
                 </Col>
                 <Col className="gutter-row" span={5}>
@@ -71,11 +76,12 @@ export const Purchase = () => {
                     <HotelPrice />
                 </Col>
                 <Col className="gutter-row" span={11}>
+                    <HotelCard/>
                 </Col>
                 <Col className="gutter-row" span={4}>
                 </Col>
             </Row>
             <FooterBlue />
-        </>
+        </div>
     )
 }

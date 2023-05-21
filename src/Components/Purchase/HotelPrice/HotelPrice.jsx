@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card,Space, Typography } from 'antd';
+import { Card, Typography } from 'antd';
+import { DollarOutlined } from '@ant-design/icons';
 import 'dayjs/locale/zh-cn';
 import locale from 'antd/es/date-picker/locale/zh_CN';
 
@@ -19,8 +20,11 @@ export const HotelPrice= () => {
             </Card.Grid>
             <Card.Grid style={normalStyle}>
                 <h3>价格信息</h3>
-                <p>含403.59元税费和其他费用</p>
-                
+                <DollarOutlined />含403.59元税费和其他费用
+                <p>10%增值税：229.34元</p>
+                <p>毛巾费：60.61元</p>
+                <p>床单费：113.64元</p>
+                <p>城市税：45.46元</p>
             </Card.Grid>
         </Card>
     )

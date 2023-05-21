@@ -64,7 +64,7 @@ export const HotelDetails = () => {
                     />
                     <AllIcons />
                     <Availability />
-                    <SearchHouse id={sendData[0].id}/>
+                    <SearchHouse id={sendData[0].id} url={sendData[0].url}/>
                 </Div>
             </Wrapper>
             <FooterBlue />

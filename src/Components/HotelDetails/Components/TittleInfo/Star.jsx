@@ -14,7 +14,6 @@ export default function Star(props) {
   return (
     <Div>
       <Rating name="size-small" value={props.num} max={Number(props.num)} size="small" />
-
     </Div>
   );
 }

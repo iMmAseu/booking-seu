@@ -94,7 +94,7 @@ const onChange = (value) => {
     console.log('changed', value);
   };
 
-export const SearchHouse= ({ id}) => {
+export const SearchHouse= ({id,url}) => {
     return (
     <div>
         <h2>空房情况</h2>
