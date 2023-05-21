@@ -1,30 +1,12 @@
-import styled from 'styled-components'
-import { TopSection } from '../HotelDetails/Components/TopSection/TopSection'
-import { TitleInfo } from '../HotelDetails/Components/TittleInfo/TittleInfo'
 import { Navbar } from '../Navbar/Navbar'
 import FooterBlue from '../Footer/FooterBlue'
-import { SearchRequest } from '../../Components/SearchPage/SearchRequest'
 import { useParams } from 'react-router'
 import { HotelData } from '../../Utils/HotelData'
 import { useState } from 'react'
-
-const Wrapper = styled.div`
-display: flex;
-justify-content: space-evenly;
-margin-top: 50px;
-
-&>:nth-child(1){
-    width: 20%;
-    padding: 20px;
-    height: 440px;
-}
-&>:nth-child(2){
-    width: 60%;
-}
-`
-const Div = styled.div`
-margin:0 ;
-`
+import { Col, Breadcrumb, Row } from 'antd';
+import {OrderInfo} from '../Purchase/OrderInfo/OrderInfo'
+import {HotelPrice} from '../Purchase/HotelPrice/HotelPrice'
+import { HomeOutlined, UserOutlined,BarChartOutlined } from '@ant-design/icons';
 
 export const Purchase = () => {
     const param = useParams()
@@ -43,24 +25,56 @@ export const Purchase = () => {
     return (
         <>
             <Navbar />
-            <Wrapper>
-                <SearchRequest filterSearch={filterSearch} />
-                <Div>
-                    <TopSection />
-                    <TitleInfo type="hotel" name={`${sendData[0].name}`}
-                        address={`${sendData[0].city}`}
-                        url_1={`${sendData[0].visitUrls.url_1}`}
-                        url_2={`${sendData[0].visitUrls.url_2}`}
-                        url_3={`${sendData[0].visitUrls.url_3}`}
-                        url_5={`${sendData[0].visitUrls.url_5}`}
-                        url_6={`${sendData[0].visitUrls.url_6}`}
-                        url_7={`${sendData[0].visitUrls.url_7}`}
-                        url_8={`${sendData[0].visitUrls.url_8}`}
-                        url_9={`${sendData[0].visitUrls.url_9}`}
-                        url_10={`${sendData[0].visitUrls.url_10}`}
-                    />
-                </Div>
-            </Wrapper>
+            <Row gutter={16}>
+                <Col className="gutter-row" span={2}>
+                </Col>
+            <Breadcrumb
+            items={[
+                {
+                    href: 'http://localhost:3000/',
+                    title: (
+                        <>
+                            <HomeOutlined />
+                            <span>主页</span>
+                        </>
+                    ),
+                },
+                {
+                    href: 'http://localhost:3000/search',
+                    title: (
+                        <>
+                            <UserOutlined />
+                            <span>酒店选取</span>
+                        </>
+                    ),
+                },
+                {
+                    href: '',
+                    title: (
+                        <>
+                            <BarChartOutlined/>
+                            <span>酒店详情</span>
+                        </>
+                    ),
+                },
+                {
+                    title: '付款界面',
+                },
+                ]}
+            />
+            </Row>
+            <Row gutter={[1, 24]}>
+                <Col className="gutter-row" span={4}>
+                </Col>
+                <Col className="gutter-row" span={5}>
+                    <OrderInfo />
+                    <HotelPrice />
+                </Col>
+                <Col className="gutter-row" span={11}>
+                </Col>
+                <Col className="gutter-row" span={4}>
+                </Col>
+            </Row>
             <FooterBlue />
         </>
     )

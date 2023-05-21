@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Tag,InputNumber,DatePicker,Divider,Space,Col,Row} from 'antd';
+import { Table,InputNumber,DatePicker,Divider,Space,Col,Row} from 'antd';
 import 'dayjs/locale/zh-cn';
 import locale from 'antd/es/date-picker/locale/zh_CN';
 import {InfoCircleTwoTone,RedoOutlined} from '@ant-design/icons';
