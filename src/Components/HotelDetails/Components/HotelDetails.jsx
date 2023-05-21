@@ -68,7 +68,6 @@ export const HotelDetails = () => {
                 </Div>
             </Wrapper>
             <FooterBlue />
-
         </>
     )
 }

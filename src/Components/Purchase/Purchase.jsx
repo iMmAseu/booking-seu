@@ -10,7 +10,7 @@ import {HouseInfo} from '../Purchase/HouseInfo/HouseInfo'
 import { HomeOutlined, UserOutlined,BarChartOutlined } from '@ant-design/icons'
 import { HotelCard } from './HotelCard/HotelCard'
 
-export const Purchase = () => {
+export const Purchase = () => {  
     const param = useParams()
     const [showData, setShowData] = useState(HotelData)
     const sendData = HotelData.filter((el) => {
